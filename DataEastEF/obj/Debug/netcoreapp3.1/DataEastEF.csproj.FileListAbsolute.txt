@@ -53,3 +53,4 @@ C:\Users\lexit\source\repos\DataEastEF\DataEastEF\obj\Debug\netcoreapp3.1\DataEa
 C:\Users\lexit\source\repos\DataEastEF\DataEastEF\obj\Debug\netcoreapp3.1\DataEastEF.dll
 C:\Users\lexit\source\repos\DataEastEF\DataEastEF\obj\Debug\netcoreapp3.1\DataEastEF.pdb
 C:\Users\lexit\source\repos\DataEastEF\DataEastEF\obj\Debug\netcoreapp3.1\DataEastEF.genruntimeconfig.cache
+C:\Users\lexit\source\repos\DataEastEF\DataEastEF\obj\Debug\netcoreapp3.1\DataEastEF.csprojAssemblyReference.cache

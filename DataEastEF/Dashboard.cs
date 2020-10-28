@@ -24,6 +24,7 @@ namespace DataEastEF
         {
             GameFoundDataGrid.DataSource = DataEastArcadeLists;
             Refresh();
+
         }
 
         private void GameFoundDataGrid_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,12 +35,14 @@ namespace DataEastEF
         private void Title_Button_Click(object sender, EventArgs e)
         {
             DataEastArcadeLists.Clear();
-            var context = new DataEastDatabaseContext();
-            var games = context.DataEastArcadeList
-                .FromSqlRaw("Execute dbo.GameByName")
-                .ToList();
+            using (var context = new DataEastDatabaseContext())
+            {
+                var games = context.DataEastArcadeList
+                    .OrderBy(b => b.Title)
+                    .ToList();
 
-            DataEastArcadeLists.AddRange(games);
+                DataEastArcadeLists.AddRange(games);
+            }
 
             UpdateBinding();
         }
@@ -47,36 +50,44 @@ namespace DataEastEF
         private void Release_Button_Click(object sender, EventArgs e)
         {
             DataEastArcadeLists.Clear();
-            var context = new DataEastDatabaseContext();
-            var games = context.DataEastArcadeList
-                .FromSqlRaw("EXECUTE dbo.GameByDate")
-                .ToList();
+            using (var context = new DataEastDatabaseContext())
+            {
+                var games = context.DataEastArcadeList
+                    .OrderBy(b => b.ReleaseDate)
+                    .ToList();
 
-            DataEastArcadeLists.AddRange(games);
+                DataEastArcadeLists.AddRange(games);
+            }
+
 
             UpdateBinding();
         }
         private void Genre_Button_Click(object sender, EventArgs e)
         {
             DataEastArcadeLists.Clear();
-            var context = new DataEastDatabaseContext();
-            var games = context.DataEastArcadeList
-                .FromSqlRaw("EXECUTE dbo.GameByGenre")
-                .ToList();
+            using (var context = new DataEastDatabaseContext())
+            {
+                var games = context.DataEastArcadeList
+                    .OrderBy(b => b.Genre)
+                    .ToList();
 
-            DataEastArcadeLists.AddRange(games);
+                DataEastArcadeLists.AddRange(games);
+            }
 
             UpdateBinding();
         }
         private void Hardware_Button_Click(object sender, EventArgs e)
         {
             DataEastArcadeLists.Clear();
-            var context = new DataEastDatabaseContext();
-            var games = context.DataEastArcadeList
-                .FromSqlRaw("EXECUTE dbo.GameByHardware")
-                .ToList();
 
-            DataEastArcadeLists.AddRange(games);
+            using (var context = new DataEastDatabaseContext())
+            {
+                var games = context.DataEastArcadeList
+                    .OrderBy(b => b.HardwareType)
+                    .ToList();
+
+                DataEastArcadeLists.AddRange(games);
+            }
 
             UpdateBinding();
         }

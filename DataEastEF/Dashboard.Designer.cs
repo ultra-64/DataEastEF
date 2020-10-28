@@ -38,7 +38,7 @@
             // 
             // Title_Button
             // 
-            this.Title_Button.Location = new System.Drawing.Point(156, 94);
+            this.Title_Button.Location = new System.Drawing.Point(186, 94);
             this.Title_Button.Name = "Title_Button";
             this.Title_Button.Size = new System.Drawing.Size(112, 34);
             this.Title_Button.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             // Release_Button
             // 
-            this.Release_Button.Location = new System.Drawing.Point(326, 94);
+            this.Release_Button.Location = new System.Drawing.Point(428, 94);
             this.Release_Button.Name = "Release_Button";
             this.Release_Button.Size = new System.Drawing.Size(112, 34);
             this.Release_Button.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // Genre_Button
             // 
-            this.Genre_Button.Location = new System.Drawing.Point(750, 94);
+            this.Genre_Button.Location = new System.Drawing.Point(944, 94);
             this.Genre_Button.Name = "Genre_Button";
             this.Genre_Button.Size = new System.Drawing.Size(112, 34);
             this.Genre_Button.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             // Hardware_Button
             // 
-            this.Hardware_Button.Location = new System.Drawing.Point(510, 94);
+            this.Hardware_Button.Location = new System.Drawing.Point(681, 94);
             this.Hardware_Button.Name = "Hardware_Button";
             this.Hardware_Button.Size = new System.Drawing.Size(165, 34);
             this.Hardware_Button.TabIndex = 3;
